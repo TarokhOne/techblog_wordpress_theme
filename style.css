@@ -1,0 +1,1364 @@
+:root {
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Space Grotesk', sans-serif;
+
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-background: #ffffff;
+    --color-border: #e5e7eb;
+
+    --container-width: 1200px;
+}
+
+
+/* =========================
+   RESET / GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-background);
+
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-bottom: 1px solid var(--color-border) !important;
+
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.header-container {
+    width: min(100% - 40px, var(--container-width)) !important;
+
+    min-height: 76px !important;
+
+    margin: 0 auto !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    gap: 40px !important;
+}
+
+.site-logo {
+    font-family: var(--font-heading);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.04em;
+}
+
+.main-navigation {
+    margin-left: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-menu a {
+    position: relative;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    color: var(--color-muted);
+
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-text);
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.mobile-menu-toggle {
+    display: none;
+
+    padding: 8px;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    margin: 5px 0;
+
+    background: var(--color-text);
+}
+
+
+/* =========================
+   HOMEPAGE
+========================= */
+
+.home-page {
+    width: 100%;
+
+    padding: 40px 20px;
+}
+
+.posts-grid {
+    width: min(100%, var(--container-width));
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: repeat(2, 280px);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   POST CARDS
+========================= */
+
+.grid-card {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e5e7eb;
+}
+
+.grid-card-link {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.grid-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   LARGE MIDDLE CARD
+========================= */
+
+.card-2 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+
+/* =========================
+   POST TITLE OVERLAY
+========================= */
+
+.grid-card-overlay {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 24px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.grid-card-overlay h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: var(--font-heading);
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+/* =========================
+   NEWS SECTION
+========================= */
+
+.news-section {
+    width: min(100%, var(--container-width));
+
+    margin: 60px auto 0;
+}
+
+.news-heading {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================
+   NEWS TITLE ALIGNMENT
+========================= */
+
+.news-heading-left {
+    align-items: flex-start;
+}
+
+.news-heading-center {
+    align-items: center;
+}
+
+.news-heading-right {
+    align-items: flex-end;
+}
+
+
+/* =========================
+   NEWS TITLE
+========================= */
+
+.news-heading h3 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* =========================
+   NEWS DIVIDER
+========================= */
+
+.news-divider {
+    height: 1px;
+
+    background: var(--color-border);
+}
+
+
+/* Same width as title */
+
+.news-divider-remaining {
+    width: 100%;
+}
+
+
+/* Full section width */
+
+.news-divider-full {
+    width: 100%;
+}
+
+/* =========================
+   NEWS POSTS
+========================= */
+
+.news-posts {
+    margin-top: 32px;
+}
+
+
+/* =========================
+   SINGLE NEWS POST
+========================= */
+
+.news-post {
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 28px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+/* =========================
+   POST IMAGE
+========================= */
+
+.news-post-image {
+    display: block;
+
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #e5e7eb;
+}
+
+.news-post-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+.news-post-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   IMAGE FALLBACK
+========================= */
+
+.news-post-image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-muted);
+
+    font-family: var(--font-heading);
+}
+
+
+/* =========================
+   POST CONTENT
+========================= */
+
+.news-post-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.news-post-category {
+    margin-bottom: 8px;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.news-post-title {
+    margin: 0 0 10px;
+
+    font-family: var(--font-heading);
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    line-height: 1.25;
+}
+
+.news-post-title a {
+    transition: color 0.2s ease;
+}
+
+.news-post-title a:hover {
+    color: var(--color-muted);
+}
+
+
+/* =========================
+   EXCERPT
+========================= */
+
+.news-post-excerpt {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: var(--color-muted);
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   AUTHOR
+========================= */
+
+.news-post-author {
+    margin-top: 14px;
+
+    color: var(--color-muted);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.news-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 40px;
+}
+
+.news-pagination .page-numbers {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 40px;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+}
+
+.news-pagination .page-numbers.current {
+    background: var(--color-text);
+    color: #ffffff;
+
+    border-color: var(--color-text);
+}
+
+.news-pagination .page-numbers:hover {
+    border-color: var(--color-text);
+}
+
+.news-pagination .page-numbers.dots {
+    border: 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    width: 100%;
+
+    margin-top: 80px;
+
+    background: #f3f4f6;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-container {
+    width: min(100% - 40px, var(--container-width));
+
+    min-height: 110px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-copyright {
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.footer-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--color-text);
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: #374151;
+
+    transform: translateY(-3px);
+}
+
+.footer-social i {
+    line-height: 1;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+    width: 100%;
+
+    padding: 80px 20px;
+}
+
+.contact-section {
+    width: 100%;
+}
+
+.contact-container {
+    width: min(100%, 680px);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CONTACT TITLE
+========================= */
+
+.contact-title {
+    margin: 0 0 40px;
+
+    text-align: center;
+
+    font-family: var(--font-heading);
+
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.contact-form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.contact-form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.contact-form-group input,
+.contact-form-group textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: var(--color-text);
+
+    font-family: var(--font-body);
+
+    font-size: 0.95rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-form-group input {
+    height: 50px;
+}
+
+.contact-form-group textarea {
+    min-height: 160px;
+
+    resize: vertical;
+}
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    border-color: var(--color-text);
+
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.contact-submit {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 4px;
+
+    padding: 12px 20px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--color-text);
+
+    color: #ffffff;
+
+    font-family: var(--font-body);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-submit:hover {
+    background: #374151;
+
+    transform: translateY(-1px);
+}
+
+.contact-submit:active {
+    transform: translateY(0);
+}
+
+.contact-submit i {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   CONTACT FORM MESSAGES
+========================= */
+
+.contact-message {
+    margin-bottom: 24px;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.contact-message-success {
+    background: #ecfdf5;
+
+    color: #047857;
+
+    border: 1px solid #a7f3d0;
+}
+
+.contact-message-error {
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    border: 1px solid #fecaca;
+}
+
+/* =========================
+   BLOGS PAGE
+========================= */
+
+.blogs-page {
+    width: 100%;
+
+    padding: 60px 20px;
+}
+
+.blogs-section {
+    width: min(100%, var(--container-width));
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   BLOG TABS
+========================= */
+
+.blog-tabs {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.blog-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.blog-tab {
+    flex-shrink: 0;
+
+    padding: 9px 16px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 999px;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.blog-tab:hover {
+    color: var(--color-text);
+
+    border-color: var(--color-text);
+}
+
+.blog-tab.active {
+    background: var(--color-text);
+
+    border-color: var(--color-text);
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.blogs-empty {
+    margin: 60px 0;
+
+    color: var(--color-muted);
+
+    text-align: center;
+
+    font-size: 0.95rem;
+}
+
+/* =========================
+   SINGLE POST PAGE
+========================= */
+
+body.single-post {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+.single-post-page {
+    width: 100%;
+
+    padding: 70px 20px 90px;
+}
+
+.single-post {
+    width: min(100%, 900px);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   POST HEADER
+========================= */
+
+.single-post-header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.single-post-category {
+    margin-bottom: 14px;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+.single-post-title {
+    margin: 0 auto 20px;
+
+    max-width: 850px;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+
+/* =========================
+   POST META
+========================= */
+
+.single-post-meta {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+}
+
+.single-post-meta-divider {
+    color: var(--color-border);
+}
+
+
+/* =========================
+   FEATURED IMAGE
+========================= */
+
+.single-post-image {
+    width: 100%;
+
+    margin-bottom: 50px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.single-post-image img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   POST CONTENT
+========================= */
+
+.single-post-content {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: var(--color-text);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+.single-post-content p {
+    margin: 0 0 24px;
+}
+
+.single-post-content h2,
+.single-post-content h3,
+.single-post-content h4 {
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    font-family: var(--font-heading);
+
+    line-height: 1.3;
+}
+
+.single-post-content h2 {
+    font-size: 1.8rem;
+}
+
+.single-post-content h3 {
+    font-size: 1.4rem;
+}
+
+.single-post-content h4 {
+    font-size: 1.2rem;
+}
+
+.single-post-content img {
+    width: 100%;
+
+    height: auto;
+
+    margin: 30px 0;
+
+    border-radius: 14px;
+}
+
+.single-post-content a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.single-post-content ul,
+.single-post-content ol {
+    margin: 0 0 24px;
+
+    padding-left: 24px;
+}
+
+.single-post-content blockquote {
+    margin: 30px 0;
+
+    padding: 20px 24px;
+
+    border-left: 3px solid var(--color-text);
+
+    color: var(--color-muted);
+
+    font-style: italic;
+}
+
+
+/* =========================
+   POST NAVIGATION
+========================= */
+
+.single-post-navigation {
+    max-width: 760px;
+
+    margin: 60px auto 0;
+
+    padding-top: 24px;
+
+    border-top: 1px solid var(--color-border);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.single-post-navigation a {
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+
+    transition: color 0.2s ease;
+}
+
+.single-post-navigation a:hover {
+    color: var(--color-text);
+}
+
+.single-post-previous,
+.single-post-next {
+    max-width: 45%;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    .header-container {
+        min-height: 68px;
+    }
+
+    .main-navigation {
+        display: none;
+    }
+
+    .main-navigation.is-open {
+        position: absolute;
+
+        top: 68px;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+
+        background: var(--color-background);
+
+        border-bottom: 1px solid var(--color-border);
+
+        z-index: 100;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 16px 20px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: block;
+
+        padding: 14px 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+
+    /* Homepage */
+
+    .home-page {
+        padding: 24px 16px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+
+        gap: 16px;
+    }
+
+
+    /* Cards */
+
+    .grid-card {
+        min-height: 280px;
+    }
+
+    .card-2 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .news-post {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+}
+
+    .news-post-image {
+        height: 220px;
+    }
+
+    .news-post-title {
+        font-size: 1.3rem;
+    }
+
+    /* Main Footer */
+    .site-footer {
+        margin-top: 60px;
+    }
+
+    .footer-container {
+        min-height: auto;
+
+        padding: 30px 0;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 18px;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+
+    .footer-social {
+        gap: 8px;
+    }
+
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Contact */
+
+    .contact-page {
+        padding: 50px 16px;
+    }
+
+    .contact-title {
+        margin-bottom: 30px;
+
+        font-size: 1.8rem;
+    }
+
+    .contact-form {
+        gap: 20px;
+    }
+
+    /* Blogs */
+
+    .blogs-page {
+        padding: 40px 16px;
+    }
+
+    .blog-tabs {
+        margin-bottom: 28px;
+    }
+
+    .blog-tab {
+        padding: 8px 14px;
+
+        font-size: 0.85rem;
+    }
+
+     /* Selected Post */
+
+    .single-post-page {
+        padding: 45px 16px 60px;
+    }
+
+    .single-post-header {
+        margin-bottom: 30px;
+    }
+
+    .single-post-title {
+        font-size: 2rem;
+    }
+
+    .single-post-meta {
+        flex-wrap: wrap;
+
+        font-size: 0.8rem;
+    }
+
+    .single-post-image {
+        margin-bottom: 35px;
+
+        border-radius: 14px;
+    }
+
+    .single-post-content {
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+    .single-post-navigation {
+        margin-top: 45px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .single-post-previous,
+    .single-post-next {
+        max-width: 100%;
+    }
+
+    .single-post-next {
+        text-align: right;
+    }
+
+}
