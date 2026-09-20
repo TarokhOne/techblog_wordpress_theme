@@ -4,59 +4,79 @@ A modern and responsive WordPress tech blog theme built from scratch using PHP, 
 
 ## Features
 
-- Custom WordPress classic theme
-- Fully responsive design
-- Modern tech-focused UI
-- Featured posts section
-- News/blog section
-- Individual single post pages
-- Custom Blogs page
-- Custom Contact page
-- Responsive navigation
-- Mobile-friendly layout
-- Post pagination
-- Category-based post organization
-- Admin-controlled featured posts
-- Font Awesome icons
-- Google Fonts integration
-- Custom JavaScript interactions
+* Custom WordPress classic theme
+* Fully responsive design
+* Modern tech-focused UI
+* Featured posts section
+* News/blog section
+* Individual single post pages
+* Custom Blogs page
+* Custom Contact page
+* Responsive navigation
+* Mobile-friendly layout
+* Post pagination
+* Category-based post organization
+* Admin-controlled featured posts
+* Font Awesome icons
+* Google Fonts integration
+* Custom JavaScript interactions
 
 ## Technologies
 
-- WordPress
-- PHP
-- HTML5
-- CSS3
-- JavaScript
-- MySQL
-- Font Awesome
-- Google Fonts
+* WordPress
+* PHP
+* HTML5
+* CSS3
+* JavaScript
+* MySQL
+* Font Awesome
+* Google Fonts
 
 ## Screenshots
 
 ### Homepage
 
-![Homepage](screenshots/home-page.png)
-![Homepage](screenshots/home-page2.png)
+<img src="screenshots/home-page.png" alt="Homepage" width="800">
+
+<br><br>
+
+<img src="screenshots/home-page2.png" alt="Homepage" width="800">
+
+<br><br>
 
 ### Blog Page
 
-![Blog Page](screenshots/blogs-page.png)
-![Blog Page](screenshots/blogs-page2.png)
+<img src="screenshots/blogs-page.png" alt="Blog Page" width="800">
+
+<br><br>
+
+<img src="screenshots/blogs-page2.png" alt="Blog Page" width="800">
+
+<br><br>
 
 ### Article
 
-![Single Post](screenshots/article-page.png)
-![Single Post](screenshots/article-page2.png)
+<img src="screenshots/article-page.png" alt="Article" width="800">
+
+<br><br>
+
+<img src="screenshots/article-page2.png" alt="Article" width="800">
+
+<br><br>
 
 ### Contact
 
-![Mobile](screenshots/contact-page.png)
+<img src="screenshots/contact-page.png" alt="Contact Page" width="800">
+
+<br><br>
 
 ### Blogs
 
-![Blogs Page](screenshots/blogs-page.png)
-![Blogs Page](screenshots/blogs-page2.png)
+<img src="screenshots/blogs-page.png" alt="Blogs Page" width="800">
+
+<br><br>
+
+<img src="screenshots/blogs-page2.png" alt="Blogs Page" width="800">
 
 ## Project Structure
 
@@ -66,10 +86,13 @@ tech_blog1/
 │   └── js/
 │       └── main.js
 ├── screenshots/
-│   ├── homepage.png
-│   ├── blogs.png
-│   ├── single-post.png
-│   └── mobile.png
+│   ├── home-page.png
+│   ├── home-page2.png
+│   ├── blogs-page.png
+│   ├── blogs-page2.png
+│   ├── article-page.png
+│   ├── article-page2.png
+│   └── contact-page.png
 ├── footer.php
 ├── functions.php
 ├── header.php
@@ -79,3 +102,4 @@ tech_blog1/
 ├── single.php
 ├── style.css
 └── README.md
+```
