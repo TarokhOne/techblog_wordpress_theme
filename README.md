@@ -34,6 +34,15 @@ A modern and responsive WordPress tech blog theme built from scratch using PHP, 
 
 ## Screenshots
 
+### Full Page
+
+<img src="screenshots/full-page1.png" alt="Homepage" width="800">
+
+<br><br>
+
+<img src="screenshots/full-page2.png" alt="Homepage" width="800">
+
+
 ### Homepage
 
 <img src="screenshots/home-page.png" alt="Homepage" width="800">
@@ -69,14 +78,6 @@ A modern and responsive WordPress tech blog theme built from scratch using PHP, 
 <img src="screenshots/contact-page.png" alt="Contact Page" width="800">
 
 <br><br>
-
-### Blogs
-
-<img src="screenshots/blogs-page.png" alt="Blogs Page" width="800">
-
-<br><br>
-
-<img src="screenshots/blogs-page2.png" alt="Blogs Page" width="800">
 
 ## Project Structure
 
